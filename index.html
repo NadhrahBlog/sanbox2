@@ -1,0 +1,186 @@
+
+	<head>
+		
+		<meta cha="UTF-8">
+		<meta http-equiv="X-UA-compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>personal portfolio websites</title>
+		<link rel="stylesheet" href="images/style.css">
+		
+	</head>
+		<body>
+			<div id="header">
+				<div class="container">
+					<nav>
+						<img src="images/3.jpeg" class="logo" width="100" height="100">				
+						<ul>
+							<li><a href="#header">Home</a><</li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#bottom">Achievement</a></li>
+							<li><a href="#contact">Contact Me</a></li>
+							<li><a href="#inquiry">Inquiry</a></li>
+							<i class="fa-regular fa-circle-xmark"></i>
+						</ul>
+						<i class="fa-solid fa-bars"></i>
+					</nav>
+				<div class="header-text">
+					<p>UITM Rembau Students</p>
+					<h1> Hi, Welcome to my</h1>
+					<h1>Portfolio Websites</h1>
+				</div>	
+			</div>
+<!----------------------------------------------------------------------------about---------------------	-->		
+			<div id="about">
+				<div class="container">
+					<div class="row">
+						<div class="about-col-1">
+							<img src="images/24.jpeg" width="400" height="450">
+						</div>
+							<div class="about-col-2">
+								<h1 class="sub-title">About Me</h1><p>
+								<p> Umi Nadhrah Binti Rosslan was born in 24 November 2003 at Hospital Tengku Ampuan Jemaah. I lived at Sungai Besar, Selangor with my parents and my 8 siblings. I got two brothers and 6 sisters. Here, i provided another information about myself.</P>
+								
+								<div class="tab-titles"> 
+									<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+									<p class="tab-links" onclick="opentab('experience')">Experience</p>
+									<p class="tab-links" onclick="opentab('education')">Education</p>
+								</div>
+								
+								<div class="tab-contents active-tab" id="skills">
+									<ul>
+										<li><span>Sign Language</span><br>Communication skills</li>
+											<li><span>Editor</span><br>Proffesional Editor</li>
+											<li><span>Writer</span><br>Writing Skills</li>
+									</ul>
+								</div>
+										
+									<div class="tab-contents" id="experience">
+										<ul>
+											<li><span>Mentor</span><br>Program & Events</li>
+											<li><span>Practical</span><br>Proffesional Librarian</li>
+											<li><span>Businesswoman</span><br>Entrepreneurship</li>
+										</ul>
+									</div>
+									
+									<div class="tab-contents" id="education">
+										<ul>
+											<li><span>Primary</span><br>UPSR & SRA</li>
+											<li><span>Secondary</span><br>PT3 / SMA/ SPM</li>
+											<li><span>University</span><br>Diploma of Information Management (IM110)<br>Bachelor's Degree in Library Management (IM224)
+											</li>
+										</ul>
+									</div>
+							</div>	
+					</div>	
+				</div>		
+			</div>
+<!------------------------------portfolio----------------------------------------------------->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">Achievement</h1><a name="bottom"></a>
+				<div class="work-list">
+					<div class="work">
+						<img src="images/achivement(1).jpg">
+					</div>
+				
+					<div class="work">
+						<img src="images/achivement(2).jpg">
+					</div>
+					
+					<div class="work">
+						<img src="images/achivement(3).jpeg" width="200" height="426">
+					</div>
+					
+					<div class="work">
+						<img src="images/achivement(4).jpeg">
+					</div>
+					
+					<div class="work">
+						<img src="images/achivement(5).jpeg" width="200" height="414">
+					</div>
+					
+					<div class="work">
+						<img src="images/achivement(6).jpg" width="200" height="414">
+					</div>
+		</div>		
+	</div>
+
+<!-------------------contact me-------------------------------------------------------------------->
+	<div id ="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fa-regular fa-paper-plane"></i>contact@example.com</p>
+					<p><i class="fa-regular fa-paper-plane"></i> Call Number: +6012345678</p>
+					<p> contact@example.com</p>
+					<a href="images/My_Profile.pdf" download class="btn">Click Here To Download My Profile PDF</a>
+				</div>
+				
+				<div class="contact-right">
+					<form name='submit-to-google-sheet'>
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="Email" placeholder="Your Email" required>
+						<textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+						<button type="submit" class="btn">Submit</button>
+					</form>
+					<span id="msg"></span>
+				</div>
+			</div>	
+		</div>	
+
+<!--------------------------------------------------------------------------Inquiry---------------------------------------------------------->
+<div id ="inquiry">
+		<div class="container">
+				<div class="about-col-3">
+					<h1 class="sub-title">Inquiry</h1> 
+					<p> For your information, if you have any questions or inquiry that you would like to ask, you can go to Contact Me and type any relevant issues that you would like to ask. Thank you!</p> 
+				</div>
+		</div>
+</div>
+<!-------------------------------------------------------------------------copyright----------------------------------------------------------->
+			<div class="copyright">
+				<p>Copyright @ NadhrahBlog.Personal Websites.</p>
+				<p>Portfolio Personal Websites.</p>
+				<p>Copyright @ NadhrahBlog.Personal Websites.IMD311.Individual_Assignment.</p>
+			</div>
+	</div>
+			
+		<script>
+	
+				var tablinks = document.getElementsByClassName("tab-links");
+				var tabcontents = document.getElementsByClassName("tab-contents");
+				
+				function opentab(tabname){
+					for(tablink of tablinks){
+						tablink.classList.remove("active-link");
+					}
+				
+					for(tabcontent of tabcontents){
+						tabcontent.classList.remove("active-tab");
+					}
+					event.currentTarget.classList.add("active-link");
+					document.getElementById(tabname).classList.add("active-tab");
+					}
+		</script>
+		
+<script>
+  const scriptURL = https: 'https://script.google.com/macros/s/AKfycbzY4E98H9bHcSG5qYsJbNnPeWxKKxvpzckzt3OY_NZVe8idpdeL1GPheHd8Rsh6WZ4/exec'
+  const form = document.forms['submit-to-google-sheet']
+	const msg = document.getElementById("msg")
+
+  form.addEventListener('Submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+			 msg.innerHTML = "Message sent successfully"
+			 setTimeout(function(){
+				msg.innerHTML = ""
+			 },5000)
+				form.reset()
+			 })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+	</body>
+</html>
